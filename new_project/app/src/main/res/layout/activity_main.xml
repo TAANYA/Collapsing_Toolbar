@@ -35,7 +35,7 @@
             android:src="@drawable/ww"
             app:layout_collapseMode="pin"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/img"/>
 
         <TextView
@@ -44,14 +44,161 @@
             android:layout_height="wrap_content"
             app:layout_collapseMode="pin"
             android:text="@string/user_name"
-            android:layout_marginTop="125dp"
+            android:layout_marginTop="110dp"
             android:layout_marginStart="140dp"
             android:textColor="#fff100"
             android:textStyle="bold"
             android:textSize="15sp"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/id"
+            app:layout_collapseMode="pin"
+            android:id="@+id/textviewid"
+            android:textStyle="bold"
+            android:layout_marginTop="130dp"
+            android:layout_marginStart="170dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_collapseMode="pin"
+            android:layout_marginTop="150dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img1"
+                android:layout_marginStart="30dp"
+                android:src="@drawable/ic_chat"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rs0/msg"
+                android:textStyle="italic"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="5dp"
+                android:textSize="17sp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_call"
+                android:id="@+id/img2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rs0/min"
+                android:textStyle="italic"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="5dp"
+                android:textSize="17sp"
+                />
+
+            <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_video"
+            android:id="@+id/img3"/>
 
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rs0/min"
+                android:textStyle="italic"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="5dp"
+                android:textSize="17sp"
+                />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_collapseMode="pin"
+            android:layout_marginTop="200dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img4"
+                android:layout_marginStart="35dp"
+                android:src="@drawable/ic_chat"/>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="55dp"
+                android:src="@drawable/ic_call"
+                android:id="@+id/img5"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="55dp"
+                android:src="@drawable/ic_video"
+                android:id="@+id/img6"/>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="55dp"
+                android:src="@drawable/ic_mail"
+                android:id="@+id/img7"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_collapseMode="pin"
+            android:layout_marginTop="225dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="chat"
+                android:textStyle="bold"
+                android:layout_marginStart="45dp"
+                android:textSize="10sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="call"
+                android:textStyle="bold"
+                android:layout_marginStart="73dp"
+                android:textSize="10sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="video call"
+                android:textStyle="bold"
+                android:layout_marginStart="58dp"
+                android:textSize="10sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="mail"
+                android:textStyle="bold"
+                android:layout_marginStart="60dp"
+                android:textSize="10sp"/>
+        </LinearLayout>
 
     </android.support.design.widget.CollapsingToolbarLayout>
 
@@ -77,6 +224,13 @@
             android:text="Right" />
 
     </android.support.design.widget.TabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewpager">
+
+    </android.support.v4.view.ViewPager>
     
     
    </android.support.design.widget.AppBarLayout>
@@ -86,14 +240,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="350dp"
         android:clipToPadding="true">
-
-        <android.support.v4.view.ViewPager
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/viewpager">
-
-        </android.support.v4.view.ViewPager>
-
 
 
 

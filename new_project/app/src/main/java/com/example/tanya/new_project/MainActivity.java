@@ -32,35 +32,33 @@ public class MainActivity extends AppCompatActivity implements Tab1.OnFragmentIn
 //        tabLayout.addTab(tabLayout.newTab().setText("Tab 1"));
 //        tabLayout.addTab(tabLayout.newTab().setText("Tab 2"));
 //        tabLayout.addTab(tabLayout.newTab().setText("Tab 3"));
-//        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+        tabLayout.setTabGravity(TabLayout.GRAVITY_CENTER);
         tabLayout.setupWithViewPager(viewPager);
 
+        viewPager.setOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener()
+        {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab)
+            {
+                viewPager.setCurrentItem(tab.getPosition());
+            }
 
-//        viewPager.setAdapter(adapter);
-//        viewPager.setOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-//        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener()
-//        {
-//            @Override
-//            public void onTabSelected(TabLayout.Tab tab)
-//            {
-//                viewPager.setCurrentItem(tab.getPosition());
-//            }
-//
-//            @Override
-//            public void onTabUnselected(TabLayout.Tab tab)
-//            {}
-//
-//            @Override
-//            public void onTabReselected(TabLayout.Tab tab)
-//            {}
-//        });
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab)
+            {}
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab)
+            {}
+        });
     }
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new Tab1(), "ONE");
-        adapter.addFragment(new Tab2(), "TWO");
-        adapter.addFragment(new Tab3(), "THREE");
+        adapter.addFragment(new Tab1(), "Reviews");
+        adapter.addFragment(new Tab2(), "Qualification");
+        adapter.addFragment(new Tab3(), "More");
         viewPager.setAdapter(adapter);
     }
 
