@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">new_project</string>
+    <string name="user_name">TANYA GUPTA</string>
+    <string name="id">ID : 64</string>
+    <string name="chat">chat</string>
+    <string name="call">call</string>
+    <string name="video">video</string>
+    <string name="email">mail</string>
+
+</resources>
