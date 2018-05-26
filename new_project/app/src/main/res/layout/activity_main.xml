@@ -2,7 +2,7 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
 
@@ -10,7 +10,7 @@
 <android.support.design.widget.AppBarLayout
     android:layout_width = "match_parent"
     android:layout_height= "wrap_content"
-    android:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar"
+    android:theme="@style/Base.Theme.AppCompat.Light"
     android:fitsSystemWindows="true">
 
     <android.support.design.widget.CollapsingToolbarLayout
@@ -50,17 +50,55 @@
             android:textStyle="bold"
             android:textSize="15sp"/>
 
+
+
+
     </android.support.design.widget.CollapsingToolbarLayout>
 
-</android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tablayout">
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Left" />
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Center" />
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Right" />
+
+    </android.support.design.widget.TabLayout>
+    
+    
+   </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.widget.NestedScrollView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="350dp"
         android:clipToPadding="true">
-      
+
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/viewpager">
+
+        </android.support.v4.view.ViewPager>
+
+
 
 
     </android.support.v4.widget.NestedScrollView>
+
+
 
 </android.support.design.widget.CoordinatorLayout>
